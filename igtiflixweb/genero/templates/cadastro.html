@@ -13,6 +13,28 @@
     </body>
     <main>
         <div class="container">
+            <div>
+                {% if genero_records %}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Genero</th>
+                                <th>Clique para alterar</th>
+                                <th>Clique para excluir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for genero in genero_records %}
+                                <td>{{ genero.descricao }}</td>
+                                <td><button>Alterar</button></td>
+                                <td><button>Excluir</button></td>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>Nenhum dado cadastrado</p>
+                {% endif %}
+            </div>
             <div class="divform">
                 <form onsubmit="/genero" id="form-genero" method="POST">
                     {{ form }}

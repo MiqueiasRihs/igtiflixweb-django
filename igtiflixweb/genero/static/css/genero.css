@@ -29,6 +29,8 @@ form label {
     align-items: center;
 }
 
-.divform {
-    background-color: blue;
+table {
+    margin: 30px;
+    text-align: center;
+    
 }
