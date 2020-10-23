@@ -1,5 +1,7 @@
 from django.shortcuts import render
-
+from . import forms
 
 def cadastro(request):
-    return render(request, 'cadastro.html')
+    form = forms.GeneroForm()
+    data_dict = {'form':form}
+    return render(request, 'cadastro.html', data_dict)
